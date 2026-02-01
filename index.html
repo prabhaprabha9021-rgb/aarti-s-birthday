@@ -2,27 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Aarti's Birthday Surprise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarti's Birthday | Surprise</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="card">
         <div id="page1">
-            <h1>Hey Aartuuu! ✨</h1>
+            <h1 class="bounce">Hey Aartuuu! ✨</h1>
+            <p>I made something special for you. Ready?</p>
             <button onclick="startExperience()">Open Surprise 🎁</button>
         </div>
 
         <div id="page2" style="display: none;">
-            <h2>Make a wish and BLOW! 🌬️</h2>
-            <img src="cake.jpg" style="width:200px;">
-            <p id="status">Listening...</p>
+            <h2>Make a Wish... ✨</h2>
+            <img src="cake.jpg" id="cake-img" alt="Birthday Cake">
+            <p>Close your eyes and <b>BLOW</b> on the mic! 🌬️</p>
+            <div id="status" style="font-size: 0.8rem; opacity: 0.7;">Waiting for your breath...</div>
         </div>
 
         <div id="page3" style="display: none;">
-            <h1>HAPPY BIRTHDAY! 🎈🎉</h1>
+            <h1 class="bounce" style="font-size: 2.5rem;">HAPPY BIRTHDAY! 🎈</h1>
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueGZueXFueXFueXFueXFueXFueXFueXFueXFueXFueXFueCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LpDm9ebO5O4f9Gf5G9/giphy.gif" style="width: 100%; border-radius: 10px;">
+            <p>You are amazing! Enjoy your day! 🎉</p>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
+
