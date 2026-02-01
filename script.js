@@ -2,6 +2,10 @@ function startExperience() {
     // Page 1 chhupao aur Page 2 dikhao
     document.getElementById('page1').style.display = 'none';
     document.getElementById('page2').style.display = 'block';
+
+    // MUSIC PLAY LINE:
+    var song = document.getElementById('mySong');
+    song.play().catch(error => console.log("Music play failed:", error));
     
     // Mic detection shuru karo
     startMicDetection();
