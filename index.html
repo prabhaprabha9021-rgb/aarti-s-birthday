@@ -3,118 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aarti's Birthday Surprise</title>
+    <title>Aarti's Birthday Surprise 🎂</title>
+    
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* CSS: Making it look like a celebration */
-        body {
-            background-color: #fff5f8;
-            font-family: 'cursive', sans-serif;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .card {
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border: 5px solid #ffb6c1;
-            max-width: 400px;
-        }
-        button {
-            background-color: #ff69b4;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 18px;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-        button:hover {
-            transform: scale(1.1);
-        }
-        #timer {
-            font-size: 80px;
-            color: #ff1493;
-            margin: 20px 0;
-        }
-        .hidden {
-            display: none;
-        }
-        img {
-            width: 250px;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-    </style>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div class="card">
         <div id="page1">
-            <h1>Hey! Someone has a Birthday... 🎂</h1>
-            <p>Are you ready for the surprise?</p>
-            <button onclick="goToPage2()">Yes, Let's Go! 🚀</button>
+            <h1>Hey Aartuuu! ✨</h1>
+            <p>Something special is waiting for you...</p>
+            <button onclick="startExperience()">Open Surprise 🎁</button>
         </div>
 
-        <div id="page2" class="hidden">
-            <h2>Make a Wish!</h2>
+        <div id="page2" class="hidden" style="display: none;">
+            <h2>Make a wish and BLOW! 🌬️</h2>
             <div id="timer">3</div>
             <img src="cake.jpg" id="cake-img" alt="Birthday Cake">
-            <br>
-            <button id="blow-btn" class="hidden" onclick="goToPage3()">Blow the Candles! 🌬️</button>
+            <p id="status">Listening for your breath...</p>
         </div>
 
-        <div id="page3" class="hidden">
-            <h1 style="color: #ff1493;">Happy Birthday, Aarti! 🎈🎉</h1>
-            <p>Wishing you a year full of happiness and success!</p>
+        <div id="page3" class="hidden" style="display: none;">
+            <h1 class="bounce">HAPPY BIRTHDAY! 🎈🎉</h1>
+            <p>May all your wishes come true!</p>
             <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueGZueXFueXFueXFueXFueXFueXFueXFueXFueXFueXFueCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LpDm9ebO5O4f9Gf5G9/giphy.gif" alt="Confetti">
             <br>
             <button onclick="location.reload()">Restart 🔄</button>
         </div>
     </div>
 
-    <script>
-        // JavaScript: The Logic/Brain
-        function goToPage2() {
-            document.getElementById('page1').classList.add('hidden');
-            document.getElementById('page2').classList.remove('hidden');
-            startCountdown();
-        }
-
-        function startCountdown() {
-            let count = 3;
-            const timerElement = document.getElementById('timer');
-            const blowButton = document.getElementById('blow-btn');
-
-            const interval = setInterval(() => {
-                count--;
-                timerElement.innerText = count;
-
-                if (count <= 0) {
-                    clearInterval(interval);
-                    timerElement.innerText = "NOW!";
-                    blowButton.classList.remove('hidden');
-                }
-            }, 1000);
-        }
-
-        function goToPage3() {
-            document.getElementById('page2').classList.add('hidden');
-            document.getElementById('page3').classList.remove('hidden');
-            // Adding a small alert for extra effect
-            alert("✨ Wish Granted! ✨");
-        }
-    </script>
     <script src="script.js"></script>
 
 </body>
 </html>
-
-
-
